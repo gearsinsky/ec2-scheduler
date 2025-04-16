@@ -10,6 +10,7 @@ on:
     - cron: '0 0 * * *'
     # 每天台灣 08:40 關機（= UTC 00:40）
     - cron: '40 0 * * *'
+  workflow_dispatch:
 
 jobs:
   ec2-control:
