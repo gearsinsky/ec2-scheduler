@@ -1,0 +1,22 @@
+name: Stop EC2
+
+on:
+  schedule:
+    - cron: '35 0 * * *'    # 台灣 08:35
+    - cron: '40 11 * * *'   # 台灣 19:40
+  workflow_dispatch:
+
+jobs:
+  stop-ec2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stop EC2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_SESSION_TOKEN : ${{ secrets.AWS_SESSION_TOKEN }}
+          AWS_DEFAULT_REGION: ap-northeast-1
+        run: |
+          INSTANCE_ID="i-0b9fe2660a50a202f"
+          echo "🔴 Stopping EC2..."
+          aws ec2 stop-instances --instance-ids $INSTANCE_ID
