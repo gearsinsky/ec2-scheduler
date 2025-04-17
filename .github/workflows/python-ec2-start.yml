@@ -2,7 +2,7 @@ name: Start EC2
 
 on:
   schedule:
-    - cron: '45 04 * * *'   # 台灣 00:45
+    - cron: '45 16 * * *'   # 台灣 00:45
    # - cron: '45 10 * * *'   # 台灣 18:45
   workflow_dispatch:
 
