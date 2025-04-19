@@ -1,4 +1,4 @@
-name: Start EC2
+name: Start python-EC2
 
 on:
   schedule:
