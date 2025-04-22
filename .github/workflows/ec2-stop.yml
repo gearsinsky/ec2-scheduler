@@ -20,3 +20,4 @@ jobs:
           INSTANCE_ID="i-0b9fe2660a50a202f"
           echo "🔴 Stopping EC2..."
           aws ec2 stop-instances --instance-ids $INSTANCE_ID
+          echo "Current date: $(date)"
