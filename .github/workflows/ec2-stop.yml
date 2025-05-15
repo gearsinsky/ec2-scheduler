@@ -2,8 +2,8 @@ name: Stop EC2
 
 on:
   schedule:
-    - cron: '35 00 * * *'    # 台灣 08:35
-    - cron: '40 11 * * *'   # 台灣 19:40
+#    - cron: '35 00 * * *'    # 台灣 08:35
+#    - cron: '40 11 * * *'   # 台灣 19:40
   workflow_dispatch:
 
 jobs:
